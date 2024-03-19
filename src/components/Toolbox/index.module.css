@@ -1,0 +1,37 @@
+.toolbox_container {
+    @apply p-5 absolute top-1/4 left-5 w-64 rounded-md;
+    box-shadow: theme('colors.shadow1');
+    border: 1px solid theme('colors.border1');
+    background-color: theme('colors.background1');
+
+    @media screen and (max-width: 640px) {
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .toolbox_container_item {
+        @apply mb-5;
+
+        .toolbox_container_item_text {
+            color: theme('colors.text1');
+            font-size: 11px;
+        }
+
+        .toolbox_container_item_box {
+            @apply flex justify-between mt-2;
+
+            .color_box {
+                @apply h-5 w-5 mr-1 rounded-sm cursor-pointer;
+                border: 1.5px solid transparent;
+
+                &.active,
+                &:hover {
+                    border: 1.5px solid theme('colors.border2');
+                    box-shadow: theme('colors.shadow2');
+                }
+            }
+        }
+    }
+}
